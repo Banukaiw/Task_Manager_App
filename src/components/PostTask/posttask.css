@@ -1,0 +1,57 @@
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  form input,
+  form textarea,
+  form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  form input:focus,
+  form textarea:focus,
+  form select:focus {
+    border-color: blue;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: blue;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: rgb(5, 5, 97);
+  }
+  
