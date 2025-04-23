@@ -8,7 +8,7 @@ const CardList = ({notes}, handleAddNote) => {
   return (
     <div className='card-list'>
       {notes.map((note)=>
-      <Card id={note.id} text={note.text} date={note.date} description={note.description}/>)}
+      <Card id={note.id} text={note.text} date={note.date} description={note.description} priority={note.priority}/>)}
         
     </div>
   )

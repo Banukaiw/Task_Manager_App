@@ -1,35 +1,35 @@
-import './posttask.css'
-import React, { useState } from 'react'
+import './posttask.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const PostTask = (handlePost) => {
-    /* const [noteText,setNotetext] = useState('');
-    const handleChange =(event)=>{
-        setNotetext(event.target.value)
-    }
+const PostTask = () => {
+  const navigate = useNavigate();
 
-    const handleSaveClick =()=>{
-        
-    } */
-    const [task, setTask] = useState({
-      title: "",
-      description: "",
-      dueDate: "",
-      priority: "Normal",
-    });
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setTask({ ...task, [name]: value });
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      handlePost(task);
-      setTask({ title: "", description: "", dueDate: "", priority: "Normal" });
-    };
+  const [task, setTask] = useState({
+    title: '',
+    description: '',
+    dueDate: '',
+    priority: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setTask({ ...task, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Navigate to Home and pass the task data
+    navigate('/', { state: { newTask: task } });
+
+    // Clear form (optional, since we navigate away)
+    setTask({ title: '', description: '', dueDate: '', priority: '' });
+  };
+
   return (
     <div className="form-container">
-        <h2>Post a New Task</h2>
+      <h2>Post a New Task</h2>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input
@@ -67,13 +67,12 @@ const PostTask = (handlePost) => {
           <option value="High">High</option>
         </select>
 
-        <button type="submit" className="submit-button">Post Task</button>
+        <button type="submit" className="submit-button">
+          Post Task
+        </button>
       </form>
-
-
-        {/* <button onClick={handleSaveClick} className='save'>Save</button> */}
     </div>
-  )
-}
+  );
+};
 
-export default PostTask
+export default PostTask;
