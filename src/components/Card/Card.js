@@ -6,15 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 /* import { faEnvelope } from '@fortawesome/free-solid-svg-icons' */
 import { faPenToSquare, faTrash, faEye } from "@fortawesome/free-solid-svg-icons";
 
-const Card = ({id, text, date,description}) => {
+const Card = ({id, text, date,description, priority}) => {
   return (
     <div className="card">
       <div className="card-content">
         <span className="card_title">{text}</span>
         <p className="card_des">{description}</p>
         <ul className="card_list">
-          <li>Due Date:</li>
-          <li>Priority:</li>
+          <li>Due Date:<span> {date}</span></li>
+          <li>Priority:<span> {priority}</span></li>
           <li>Empty:</li>
           <li>Structure:</li>
         </ul>
