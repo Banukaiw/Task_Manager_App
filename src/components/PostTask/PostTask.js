@@ -1,16 +1,27 @@
-import './posttask.css';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// PostTask.js
+import './posttask.css'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'; // Modified: Import useNavigate
 
-const PostTask = () => {
-  const navigate = useNavigate();
+// Modified: handlePost prop (this is the addTask function from App.js)
+const PostTask = ({ handlePost }) => {
+  // const [noteText,setNotetext] = useState('');
+  // const handleChange =(event)=>{
+  // setNotetext(event.target.value)
+  // }
 
+  // const handleSaveClick =()=>{
+
+  // }
   const [task, setTask] = useState({
-    title: '',
-    description: '',
-    dueDate: '',
-    priority: '',
+    title: "",
+    description: "",
+    dueDate: "",
+    priority: "Normal",
   });
+
+  // Modified: Get the navigate function
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,12 +30,10 @@ const PostTask = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Navigate to Home and pass the task data
-    navigate('/', { state: { newTask: task } });
-
-    // Clear form (optional, since we navigate away)
-    setTask({ title: '', description: '', dueDate: '', priority: '' });
+    handlePost(task); // Modified: Call the handlePost (addTask) prop with the task data
+    setTask({ title: "", description: "", dueDate: "", priority: "Normal" }); // Reset form
+    // Modified: Navigate back to the home page after submitting
+    navigate('/');
   };
 
   return (
@@ -67,12 +76,13 @@ const PostTask = () => {
           <option value="High">High</option>
         </select>
 
-        <button type="submit" className="submit-button">
-          Post Task
-        </button>
+        <button type="submit" className="submit-button">Post Task</button>
       </form>
-    </div>
-  );
-};
 
-export default PostTask;
+
+      {/* <button onClick={handleSaveClick} className='save'>Save</button> */}
+    </div>
+  )
+}
+
+export default PostTask
