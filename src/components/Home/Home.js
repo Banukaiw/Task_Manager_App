@@ -1,61 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import { nanoid } from 'nanoid';
-import { Link, useLocation } from 'react-router-dom';
-import CardList from '../Card/CardList';
-import Search from '../Search/Search';
-import './home.css';
+// Home.js
+import React from "react";
+// import { useState } from "react"; // Modified: Remove useState
+// import { nanoid } from "nanoid"; // Modified: Remove nanoid
+import { Link } from "react-router-dom";
+import CardList from "../Card/CardList";
+import Search from "../Search/Search";
+import "./home.css";
 
-const Home = () => {
-  const location = useLocation();
+// Modified: Receive tasks as a prop
+const Home = ({ tasks }) => {
+  // Modified: Remove notes state
+  // const [notes, setNotes] = useState([]);
 
-  const [notes, setNotes] = useState([
-    {
-      id: nanoid(),
-      text: 'Prepare Monthly Report',
-      date: '15/04/2024',
-      description: 'Check code quality, leave comments, and approve if all looks good.',
-    },
-    {
-      id: nanoid(),
-      text: 'This is the second note',
-      date: '16/04/2024',
-      description: 'Investigate the issue with session timeout and apply a patch.',
-    },
-    {
-      id: nanoid(),
-      text: 'This is the third note',
-      date: '21/04/2024',
-      description: 'Reflect latest changes in endpoints and request formats.',
-    },
-  ]); 
-
-  useEffect(() => {
-    if (location.state?.newTask) {
-      const { title, description, dueDate, priority } = location.state.newTask;
-
-      const newNote = {
-        id: nanoid(),
-        text: title,
-        description: description,
-        date: dueDate,
-        priority: priority,
-      };
-
-      setNotes((prev) => [...prev, newNote]);
-    }
-  }, [location.state]);
+  // Modified: Remove addNote function
+  /* const addNote = (text) => {
+    console.log(text);
+  }; */
 
   return (
     <div className="home">
       <h2>All Tasks</h2>
       <Search />
-      <hr />
+      <hr></hr>
       <div className="button-container">
+        {/* This Link is correct for navigating to the Post Task page */}
         <Link to="/newpost">
           <button className="postbutton">Post Task</button>
         </Link>
       </div>
-      <CardList notes={notes} />
+      {/* Modified: Pass the tasks prop down to CardList */}
+      {/* Modified: Remove handleAddNote prop from CardList */}
+      <CardList tasks={tasks} />
     </div>
   );
 };
