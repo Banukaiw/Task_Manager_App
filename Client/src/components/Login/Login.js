@@ -3,6 +3,7 @@ import "./login.css";
 import React, { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const Login = () => {
     
@@ -16,7 +17,7 @@ const Login = () => {
       .then(result => {
         console.log(result)
         if(result.data === "Success"){
-          navigate('/')
+          navigate('/home')
         }
         
       })
@@ -24,6 +25,7 @@ const Login = () => {
     }
   return (
     <div>
+      <Navbar/>
       <div className="log-container">
         <div className="logform">
           <h2>Login</h2>

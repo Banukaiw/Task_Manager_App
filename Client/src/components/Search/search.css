@@ -2,20 +2,29 @@
     width: 60%;
     display: flex;
     align-items: center;
-    background-color: rgb(233,233,233);
+    background-color: transparent;
     border-radius: 10px;
     padding: 10px 5px;
     margin: 1.5em auto;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    justify-content: space-between;
 }
 .search .searchicon{
-    margin-left: 2%;
+    margin-right: 2%;
+    color: rgba(255, 255, 255, 0.6);
 }
 .search input{
     border: none;
     margin-left: 1%;
-    background-color: rgb(233,233,233);
+    background-color: transparent;
+    color: white;
+}
+
+.search .inputtext{
+    color: white;
 }
 
 .search input:focus{
     outline: none;
+    color: rgb(255, 255, 255);
 }

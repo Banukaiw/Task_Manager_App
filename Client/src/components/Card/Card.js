@@ -29,6 +29,7 @@ const Card = ({ task }) => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };
