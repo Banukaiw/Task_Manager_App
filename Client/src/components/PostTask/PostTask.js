@@ -1,10 +1,13 @@
 // PostTask.js
 import './posttask.css'
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { useNavigate } from 'react-router-dom'; // Modified: Import useNavigate
 
 // Modified: handlePost prop (this is the addTask function from App.js)
 const PostTask = ({ handlePost }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
   // const [noteText,setNotetext] = useState('');
   // const handleChange =(event)=>{
   // setNotetext(event.target.value)
@@ -37,6 +40,25 @@ const PostTask = ({ handlePost }) => {
   };
 
   return (
+    <>
+    <div className="homenav">
+        <Link to="/home" className="title">
+          Todo list
+        </Link>
+        <div
+          className="menu"
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <Link to="/newpost">
+          <button className="postbutton">Post Task</button>
+        </Link>
+      </div>
     <div className="form-container">
       <h2>Post a New Task</h2>
       <form onSubmit={handleSubmit}>
@@ -82,6 +104,7 @@ const PostTask = ({ handlePost }) => {
 
       {/* <button onClick={handleSaveClick} className='save'>Save</button> */}
     </div>
+    </>
   )
 }
 

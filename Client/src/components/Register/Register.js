@@ -3,6 +3,7 @@ import "./register.css";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const Register = () => {
   const [name, setName] = useState();
@@ -21,6 +22,7 @@ const Register = () => {
   }
   return (
     <div>
+      <Navbar/>
       <div className="reg-container">
         <div className="regform">
           <h2>Sign up</h2>
