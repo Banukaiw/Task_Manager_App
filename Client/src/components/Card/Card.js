@@ -9,6 +9,7 @@ import { faPenToSquare, faTrash, faEye } from "@fortawesome/free-solid-svg-icons
 const Card = ({ task }) => {
   const { title, description, dueDate, priority } = task; 
 
+
   return (
     <div className="card">
       <div className="card-content">
@@ -18,6 +19,7 @@ const Card = ({ task }) => {
           <li>Due Date: {dueDate}</li> 
           <li>Priority: {priority}</li>                    
         </ul>
+        
         <div className="card-footer">          
           <small>Due: {dueDate}</small> 
           <div className="card-icon">
