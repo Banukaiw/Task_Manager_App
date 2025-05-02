@@ -1,8 +1,8 @@
 // CardList.js
 import React from 'react'
-
 import Card from '../Card/Card.js'
 import "./cardlist.css"
+import Addcard from './Addcard.js'
 
 // Modified: Receive tasks as a prop, remove handleAddNote
 const CardList = ({ tasks }) => {
@@ -14,8 +14,9 @@ const CardList = ({ tasks }) => {
       {tasks.map((task) =>
         <Card key={task.id} task={task} />
       )}
+      
       {/* Modified: Removed the AddCard/handleAddNote part - it's handled by the Post Task page */}
-      {/* <AddCard handleAddNote={handleAddNote}/> */}
+      <Addcard /> 
     </div>
   )
 }

@@ -12,7 +12,7 @@ import {
   faCalendarDays,
   faSun,
   faMoon,
-  faPlus,
+  faVihara,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Home = ({ tasks }) => {
@@ -30,10 +30,15 @@ const Home = ({ tasks }) => {
 
   return (
     <div className="home">
-      <div className="homenav">
-        <Link to="/home" className="title">
-          Todo list
-        </Link>
+      <div className="nav_side">
+        <div className="logo">
+          <FontAwesomeIcon className="logo_icon" icon={faVihara} />
+          <Link to="/home" className="title">
+            Todo list
+            <p>Welcome back to home</p>
+          </Link>
+        </div>
+
         <div
           className="menu"
           onClick={() => {
@@ -91,13 +96,7 @@ const Home = ({ tasks }) => {
             </ul>
           </div>
         </div>
-        <div className="AllCard">
-          <CardList tasks={tasks} />
-          
-          <div className="post_card">
-            <FontAwesomeIcon icon={faPlus} />
-          </div>
-        </div>
+        <CardList tasks={tasks} />
       </div>
       <div className="status_side"></div>
     </div>
