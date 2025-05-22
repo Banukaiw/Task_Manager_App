@@ -1,5 +1,12 @@
 // Home.js
 /* fire alan walker */
+/* kuludul araliya */
+/* hanthane - costa */
+/* sandakinnarawi mage */
+/* ahankata nagere 2 */
+/* hanthane mal */
+/* marathondi */
+/* ko enna ko */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 //import { NavLink } from "react-router-dom";
@@ -22,7 +29,7 @@ const Home = ({ tasks }) => {
 
   const toggleTheme = () => {
     if (theme === "light") {
-      setTheme("dark");
+      setTheme("dark"); 
     } else {
       setTheme("light");
     }
@@ -53,6 +60,7 @@ const Home = ({ tasks }) => {
           <Link to="/newpost">
             <button className="postbutton">Post Task</button>
           </Link>
+
 
           <div>
             {theme === "dark" ? (
