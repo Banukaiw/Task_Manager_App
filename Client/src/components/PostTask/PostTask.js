@@ -2,7 +2,6 @@
 import './posttask.css'
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useNavigate } from 'react-router-dom'; // Modified: Import useNavigate
 
 // Modified: handlePost prop (this is the addTask function from App.js)
@@ -12,9 +11,7 @@ const PostTask = ({ handlePost }) => {
   // const handleChange =(event)=>{
   // setNotetext(event.target.value)
   // }
-
   // const handleSaveClick =()=>{
-
   // }
   const [task, setTask] = useState({
     title: "",
@@ -36,16 +33,14 @@ const PostTask = ({ handlePost }) => {
     handlePost(task); // Modified: Call the handlePost (addTask) prop with the task data
     setTask({ title: "", description: "", dueDate: "", priority: "Normal" }); // Reset form
     // Modified: Navigate back to the home page after submitting
-    navigate('/');
+    navigate('/home');
   };
 
-
-  
   return (
     <>
     <div className="homenav">
         <Link to="/home" className="title">
-          Todo list
+          Todo list1
         </Link>
         <div
           className="menu"
