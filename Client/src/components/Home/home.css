@@ -236,14 +236,14 @@ link{
 
 .menu_side{
     width: 6%;
-    height: 100vh;
+    height: 91vh;
     background-color:#010409;
 }
 
 .home .content_side{
     position: relative;
     width: 74%;
-    height: 100vh;
+    height: 91vh;
     background-color: #292a2c;
     border-radius: 15px 15px 0 0;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -295,8 +295,61 @@ link{
 
 .status_side{
     width: 20%;
-    height: 100vh;
+    height: 90vh;
     background-color:#010409;
 }
 
+.profile_status{
+    height: 70px;
+    background-color: #292a2cc0;
+    border-radius: 10px;
+    margin: 2%;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.current_status1{
+    position: relative;
+    height: 350px;
+    background-color: #292a2cc0;
+    margin: 2%;
+    border-radius: 5%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.current_status1 p{
+    margin-top: 3%;
+}
+
+.current_status2{
+    margin: 8% 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    gap: 0.5rem;
+}
+
+.current_status2 .sec1{
+    background-color: #292a2cc0;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+.status_button{
+    margin: 8% 5%;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    border-radius: 5px;
+    background-color: rgb(197, 197, 197);
+}
+
+.status_button p{
+    justify-content: center;
+    align-items: center;
+    margin: auto 1%;
+}
   

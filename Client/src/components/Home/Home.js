@@ -5,10 +5,8 @@
 /* sandakinnarawi mage */
 /* ahankata nagere 2 */
 /* hanthane mal */
-
-
-
-
+/* sun - watsebha */
+/* living life - KNOX */
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -32,7 +30,7 @@ const Home = ({ tasks }) => {
 
   const toggleTheme = () => {
     if (theme === "light") {
-      setTheme("dark"); 
+      setTheme("dark");
     } else {
       setTheme("light");
     }
@@ -63,7 +61,6 @@ const Home = ({ tasks }) => {
           <Link to="/newpost">
             <button className="postbutton">Post Task</button>
           </Link>
-
 
           <div>
             {theme === "dark" ? (
@@ -109,7 +106,21 @@ const Home = ({ tasks }) => {
         </div>
         <CardList tasks={tasks} />
       </div>
-      <div className="status_side"></div>
+      <div className="status_side">
+        <div className="profile_status"></div>
+        <div className="current_status2">
+          <div className="sec1"></div>
+          <div className="sec1"></div>
+          <div className="sec1"></div>
+          <div className="sec1"></div>
+        </div>
+        <div className="current_status1">
+          <p>CURRENT STATUS</p>
+        </div>
+        <div className="status_button">
+          <p>Log Out</p>
+        </div>
+      </div>
     </div>
   );
 };
