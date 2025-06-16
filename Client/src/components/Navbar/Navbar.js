@@ -7,7 +7,7 @@ import "./navbar.css"
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <div>
+    <div> 
         <nav>
             <Link to="/home" className='title'>Todo list</Link>
             <div className='menu' onClick={()=>{
