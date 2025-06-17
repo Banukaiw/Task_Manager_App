@@ -57,6 +57,7 @@ const Login = () => {
                 ></input>
               </div>
               <button type="submit" className="logbtn2">Login</button>
+              <button>Ni</button>
               
               <p>
                 Don't have an account?
