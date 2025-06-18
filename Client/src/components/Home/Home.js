@@ -56,6 +56,7 @@ const Home = ({ tasks }) => {
           <span></span>
           <span></span>
           <span></span>
+          <div></div>
         </div>
         <div className="homenav_right">
           <Link to="/newpost">
