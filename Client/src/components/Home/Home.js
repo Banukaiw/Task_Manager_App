@@ -74,7 +74,6 @@ const Home = ({ tasks }) => {
               </button>
             )}
           </div>
-
           <div className="apps">
             <FontAwesomeIcon icon={faCalendarDays} />
           </div>
@@ -105,7 +104,10 @@ const Home = ({ tasks }) => {
             </ul>
           </div>
         </div>
-        <CardList tasks={tasks} />
+        <div className="Card_List">
+          <CardList  tasks={tasks} />
+        </div>
+        
       </div>
       <div className="status_side">
         <div className="profile_status"></div>
