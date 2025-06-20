@@ -200,6 +200,28 @@ link{
     background-color:#010409;
 }
 
+.menu_side .menu_list{
+    margin-top: 9%;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    color: white;
+    height: 250px;
+    font-size: 26px;
+    
+}
+.menu_side .menu_list ul{
+    padding: 4% 0%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+    gap: 6%;
+    
+    margin: 0;
+}
+
+
 .home .content_side{
     position: relative;
     width: 74%;
@@ -261,6 +283,7 @@ link{
 
 .profile_status{
     height: 70px;
+    max-width: 270px;
     background-color: #292a2cc0;
     border-radius: 10px;
     margin: 2%;
@@ -300,18 +323,18 @@ link{
 
 
 .status_button{
+    display: flex;
     margin: 8% 5%;
     height: 40px;
-    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 4%;
+    justify-content: center;
+    align-items: center;
     color: #000;
     border-radius: 5px;
     background-color: rgb(197, 197, 197);
-}
-
-.status_button p{
-    justify-content: center;
-    align-items: center;
-    margin: auto 1%;
+    border: 3px solid white;
 }
 
 

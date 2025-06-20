@@ -19,8 +19,8 @@ import {
   faUser,
   faCalendarDays,
   faSun,
-  faMoon,
-  faVihara,
+  faMoon,faRightFromBracket,
+  faVihara,faClipboardCheck,faStopwatch,faClockRotateLeft,faBarsStaggered
 } from "@fortawesome/free-solid-svg-icons";
 
 const Home = ({ tasks }) => {
@@ -82,7 +82,16 @@ const Home = ({ tasks }) => {
           </div>
         </div>
       </div>
-      <div className="menu_side"></div>
+      <div className="menu_side">
+        <div className="menu_list">
+          <ul>
+            <li><FontAwesomeIcon icon={faBarsStaggered} /></li>
+            <li><FontAwesomeIcon icon={faClipboardCheck} /></li>
+            <li><FontAwesomeIcon icon={faClockRotateLeft} /></li>
+            <li><FontAwesomeIcon icon={faStopwatch} /></li>
+          </ul>
+        </div>
+      </div>
 
       <div className="content_side">
         <div className="filter_content">
@@ -105,9 +114,8 @@ const Home = ({ tasks }) => {
           </div>
         </div>
         <div className="Card_List">
-          <CardList  tasks={tasks} />
+          <CardList tasks={tasks} />
         </div>
-        
       </div>
       <div className="status_side">
         <div className="profile_status"></div>
@@ -121,7 +129,8 @@ const Home = ({ tasks }) => {
           <p>CURRENT STATUS</p>
         </div>
         <div className="status_button">
-          <p>Log Out</p>
+          <FontAwesomeIcon icon={faRightFromBracket} />
+          <p>LOG OUT</p>
         </div>
       </div>
     </div>
