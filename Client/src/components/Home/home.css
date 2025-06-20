@@ -46,8 +46,6 @@
 .nav_side .title p{
     color: rgb(144, 144, 144);
     font-size: 0.9rem;
-    
-    
     text-decoration: none;
     font-family: Tahoma;
 }
@@ -211,7 +209,7 @@ link{
     border: 1px solid rgba(255, 255, 255, 0.6);
     overflow-x: auto;
     scroll-behavior: smooth;
-    margin: auto;
+    
 }
 .home .content_side::-webkit-scrollbar{
     display: none;
@@ -220,10 +218,10 @@ link{
 .home .content_side .filter_content{
     display: flex;
     align-items: center;
+    gap: 1%;
 }
 .home .content_side .filter_content .filter_button{
     padding: 3px;
-    background-color: transparent;
     border-radius: 5px;
     margin-right: 2%;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -231,6 +229,7 @@ link{
 .home .content_side .filter_content .filter_button ul{
     display: flex;
     list-style-type: none;
+    
 }
 
 .home .content_side .filter_content .filter_button ul li{
@@ -250,10 +249,9 @@ link{
     background-color: rgb(255, 255, 255);
 }
 
-
-
-
-
+.home .content_side .Card_List{
+    
+}
 
 .status_side{
     width: 20%;
@@ -317,14 +315,60 @@ link{
 }
 
 
- @media(max-width: 700px){
-    .current_status1{
+ @media(max-width: 900px){
+
+    .home .content_side{
+    width: 90%;  
+    }
+    .status_side{
         display: none;
     }
 }
+
+
+ @media(max-width: 700px){
+  
+
+    .home .content_side .filter_content{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    gap: 1%;
+        
+    }
+    .home .content_side .filter_content .filter_button{
+    padding: 3px;
+    
+    }
+    .home .content_side .filter_content .filter_button ul li button{
+    
+    font-size: 10px;
+    
+    }
+
+    .home .postbutton{
+        margin: 1rem;    
+    }
+
+    .nav_side .title{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: Tahoma;
+    
+}
+
+    .nav_side .title p{
+    display: none;
+}
+}
+
  
 
 @media(max-width: 500px){
+
+
 
     .homenav .menu{
         display: flex;
@@ -362,7 +406,5 @@ link{
         margin: 0.2rem 0.5rem;
     }
 
-    /* .current_status1{
-        height: 45%;
-    } */
+    
 }
