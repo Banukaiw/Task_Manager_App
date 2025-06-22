@@ -20,7 +20,7 @@
 .home .nav_side .logo{
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 5px 8px;
     margin-left: 1px;
     border-radius: 4px;
@@ -223,6 +223,7 @@ link{
 
 
 .home .content_side{
+    margin: 0 auto;
     position: relative;
     width: 74%;
     height: 91vh;
@@ -276,26 +277,29 @@ link{
 }
 
 .status_side{
+    display: flex;
+    flex-direction: column;
     width: 20%;
     height: 90vh;
     background-color:#010409;
+    
 }
 
 .profile_status{
     height: 70px;
-    max-width: 270px;
+    width: 85%;
     background-color: #292a2cc0;
     border-radius: 10px;
-    margin: 2%;
+    margin: 2% auto;
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .current_status1{
     position: relative;
     height: 55%;
-    
+    width: 85%;
     background-color: #292a2cc0;
-    margin: 2%;
+    margin: 2% auto;
     border-radius: 5%;
     font-size: 1rem;
     color: white;
@@ -308,9 +312,10 @@ link{
 }
 
 .current_status2{
-    margin: 8% 2%;
+    width: 85%;
+    margin: 8% auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(90px, 1fr));
     gap: 0.5rem;
 }
 
@@ -324,8 +329,9 @@ link{
 
 .status_button{
     display: flex;
-    margin: 8% 5%;
+    margin: 8% auto;
     height: 40px;
+    width: 85%;
     font-size: 1rem;
     font-weight: 600;
     gap: 4%;
@@ -337,6 +343,10 @@ link{
     border: 3px solid white;
 }
 
+.status_button Link{
+    text-decoration: none;
+}
+
 
  @media(max-width: 900px){
 
@@ -344,6 +354,10 @@ link{
     width: 90%;  
     }
     .status_side{
+        display: none;
+    }
+
+    .menu_side{
         display: none;
     }
 }
