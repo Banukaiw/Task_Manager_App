@@ -43,7 +43,7 @@ const Home = ({ tasks }) => {
           <FontAwesomeIcon className="logo_icon" icon={faVihara} />
           <Link to="/home" className="title">
             Todo list
-            <p>Welcome back to home</p>
+            <p>Welcome back to home !!</p>
           </Link>
         </div>
 
