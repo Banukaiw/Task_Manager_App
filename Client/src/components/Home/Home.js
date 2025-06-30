@@ -131,7 +131,7 @@ const Home = ({ tasks }) => {
         <div className="status_button">
           <FontAwesomeIcon icon={faRightFromBracket} />
           <Link to="/" style={{ textDecoration: 'none' }}>
-            <p>LOG OUT</p>
+            <p>LOG OUT </p>
           </Link>
           
         </div>
